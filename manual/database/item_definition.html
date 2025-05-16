@@ -1,0 +1,237 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Definition &mdash; Inventory System 2.3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=45cafc09"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Item Category" href="item_category.html" />
+    <link rel="prev" title="Inventory Database Editor" href="inventory_database_editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Inventory System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installation.html">Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/quickstart/create_database.html">Creating a Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/quickstart/create_item_definition.html">Create Item Definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/quickstart/add_items_to_inventory.html">Add items to Inventory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/quickstart/add_simple_ui.html">Add Simple UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/quickstart/operation_between_inventories.html">Operation between inventories</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manual</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../database.html">Database</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="inventory_database_editor.html">Inventory Database Editor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Item Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#item-id">Item ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-definition-editor">Item Definition Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="item_category.html">Item Category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_database_in_scenes.html">Using the Database in Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_with_json.html">Work with JSON</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../inventories.html">Inventories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../craft_stations.html">Craft Stations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/how_to_test_multiplayer.html">How to Test Multiplayer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/cmake_support.html">CMake support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">All classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#variant-types">Variant types</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Inventory System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../database.html">Database</a></li>
+      <li class="breadcrumb-item active">Item Definition</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/manual/database/item_definition.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="item-definition">
+<h1>Item Definition<a class="headerlink" href="#item-definition" title="Permalink to this heading"></a></h1>
+<p>The item definition is a resource that has values
+for items that will be used in the <a class="reference internal" href="../../api/class_inventory.html#class-inventory"><span class="std std-ref">Inventory</span></a> node. In it we store various information such as its name, its id, its weight, etc…</p>
+<section id="item-id">
+<h2>Item ID<a class="headerlink" href="#item-id" title="Permalink to this heading"></a></h2>
+<p>In inventories and other nodes of this plugin, items will not be used as definitions but rather referenced by their id.
+Many times you will want to acquire the item definition by id, for this you can use ready-made calls in the inventory node or database:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">db</span><span class="p">:</span><span class="w"> </span><span class="n">InventoryDatabase</span>
+<span class="k">var</span><span class="w"> </span><span class="n">def</span><span class="p">:</span><span class="w"> </span><span class="n">ItemDefinition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="o">.</span><span class="n">get_item</span><span class="p">(</span><span class="s2">&quot;my_item_id&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Get item definition by id</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The nodes in this plugin also extend the <a class="reference internal" href="../../api/class_nodeinventories.html#class-nodeinventories"><span class="std std-ref">NodeInventories</span></a> which has a direct call to get_item_from_id as well.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code in a node that extends NodeInventories (Inventory, CraftStation, etc)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">def</span><span class="p">:</span><span class="w"> </span><span class="n">ItemDefinition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="o">.</span><span class="n">get_item_from_id</span><span class="p">(</span><span class="s2">&quot;my_item_id&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Get item definition by id</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="item-definition-editor">
+<h2>Item Definition Editor<a class="headerlink" href="#item-definition-editor" title="Permalink to this heading"></a></h2>
+<img alt="../../_images/item_definition_editor.png" src="../../_images/item_definition_editor.png" />
+<p>In the window, items are displayed in a list on the left side, or we can also search by name.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">I</span>D</span>:</dt><dd><p>String identification of the item, used to get the item based on a list of items easily using the id.
+You can use the button to edit the id correctly, it will indicate in red if the id already exists.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">I</span>con</span>:</dt><dd><p>Texture to display your item in-game and in the editor</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">N</span>ame</span>:</dt><dd><p>Name to be displayed or used as additional identification (It is your responsibility to use this field)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">C</span>an Stack</span>:</dt><dd><p>Defines whether there is a <span class="guilabel"><span class="accelerator">M</span>ax Stack</span> for the item containing this item definition, unchecked means only one item is added to the stack.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">M</span>ax Stack</span>:</dt><dd><p>Maximum stackable item in an inventory, only used if <span class="guilabel"><span class="accelerator">C</span>an Stack</span> is active.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">W</span>eight</span>:</dt><dd><p>Weight of the item, used to calculate the weight of the inventory.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">G</span>rid Size</span>:</dt><dd><p>Size of the item in Vector2i, used to calculate the size of item in <a class="reference internal" href="../../api/class_gridinventory.html#class-gridinventory"><span class="std std-ref">GridInventory</span></a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="guilabel"><span class="accelerator">C</span>ategories</span>:</dt><dd><p>Categories this item is in are used for categorized stacks to only accept specific items. See in <a class="reference internal" href="../../api/class_inventoryconstraint.html#class-inventoryconstraint"><span class="std std-ref">InventoryConstraint</span></a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="inventory_database_editor.html" class="btn btn-neutral float-left" title="Inventory Database Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="item_category.html" class="btn btn-neutral float-right" title="Item Category" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Expresso Bits.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    Language: en
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    
+    <dl>
+      <dt>Languages</dt>
+        
+          <dd><a href="en/index.html">en</a></dd>
+        
+          <dd><a href="pt_BR/index.html">pt_BR</a></dd>
+        
+    </dl>
+    
+    <!--  -->
+    <br>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
